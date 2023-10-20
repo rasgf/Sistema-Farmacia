@@ -1,12 +1,16 @@
 package com.generation.sistemafarmacia.controller;
 
 import java.util.List;
+<<<<<<< HEAD
 import java.util.Optional;
+=======
+>>>>>>> a661be9cb5cc5848f081123dbc12db6911d783b3
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +27,15 @@ import com.generation.sistemafarmacia.repository.CategoriaRepository;
 import com.generation.sistemafarmacia.repository.RemedioRepository;
 
 import jakarta.validation.Valid;
+=======
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.generation.sistemafarmacia.model.Categoria;
+import com.generation.sistemafarmacia.repository.CategoriaRepository;
+>>>>>>> a661be9cb5cc5848f081123dbc12db6911d783b3
 
 @RestController
 @RequestMapping("/categoria")
@@ -32,9 +45,12 @@ public class CategoriaController {
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
+<<<<<<< HEAD
 	@Autowired
 	private RemedioRepository remediorepository;
 	
+=======
+>>>>>>> a661be9cb5cc5848f081123dbc12db6911d783b3
 	@GetMapping
 	public ResponseEntity<List<Categoria>> getAll(){
 		return ResponseEntity.ok(categoriaRepository.findAll());
@@ -46,6 +62,7 @@ public class CategoriaController {
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
     
+<<<<<<< HEAD
     @GetMapping("/descricao/{descricao}")
     public ResponseEntity<List<Categoria>> getByTitle(@PathVariable String descricao){
         return ResponseEntity.ok(categoriaRepository
@@ -76,6 +93,8 @@ public class CategoriaController {
 
         categoriaRepository.deleteById(id);
     }
+=======
+>>>>>>> a661be9cb5cc5848f081123dbc12db6911d783b3
 }
 
 
